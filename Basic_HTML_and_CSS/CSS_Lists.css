@@ -1,0 +1,7 @@
+ol {
+    list-style-type: upper-roman; /* I, II, III, IV, etc. */
+}
+
+ul {
+    list-style-type: square; /* square bullets instead of round */
+}
