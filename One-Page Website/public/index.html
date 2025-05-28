@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BMW E36 Tribute</title>
+    <link rel="stylesheet" href="one_page_website.css">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="home">
+    <h1>Welcome to the BMW E36 Legacy</h1>
+    <p>The BMW E36, produced from 1990 to 2000, remains a classic among enthusiasts for its perfect balance of performance, style, and innovation. Whether you're into drifting, daily driving, or just admiring German engineering, the E36 has earned its legendary status.</p>
+</section>
+
+<section id="gallery">
+    <h2>E36 Gallery</h2>
+    <div class="gallery-container"> <a href="./images/e36-front-large.jpg" data-lightbox="e36-gallery" data-title="Front view of BMW E36">
+            <img src="./images/e36-front.jpg" alt="Front view of BMW E36 thumbnail">
+        </a>
+        <a href="./images/e36-side-large.jpg" data-lightbox="e36-gallery" data-title="Side view of BMW E36">
+            <img src="./images/e36-side.jpg" alt="Side view of BMW E36 thumbnail">
+        </a>
+        <a href="./images/e36-interior-large.jpg" data-lightbox="e36-gallery" data-title="Interior of BMW E36">
+            <img src="./images/e36-interior.jpg" alt="Interior of BMW E36 thumbnail">
+        </a>
+        <a href="./images/e36-m3-large.jpg" data-lightbox="e36-gallery" data-title="BMW E36 M3 version">
+            <img src="./images/e36-m3.jpg" alt="BMW E36 M3 version thumbnail">
+        </a>
+    </div>
+</section>
+
+<section id="video">
+    <h2>BMW E36 in Action</h2>
+   <iframe width="681" height="383" src="https://www.youtube.com/embed/Lnl04k4XbNo" title="BMW E36 M3 Masterpiece: When Years of Obsession Pay Off" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p>Watch this classic E36 review and relive the 90s performance sedan magic.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Have a BMW E36 story or photos to share? Drop us a message!</p>
+    <form action="#" method="post">
+        <input type="text" placeholder="Your Name" required><br><br>
+        <input type="email" placeholder="Your Email" required><br><br>
+        <textarea placeholder="Your Message" rows="4" cols="30"></textarea><br><br>
+        <input type="submit" value="Send">
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 BMW E36 Tribute | Built for enthusiasts, by enthusiasts</p>
+</footer>
+
+<div id="lightbox-modal" class="modal">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="lightbox-img">
+    <div id="caption"></div>
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+</div>
+
+<script src="./JS/one_page_website.js"></script>
+
+</body>
+</html>

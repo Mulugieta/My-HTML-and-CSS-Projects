@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0; /* Remove default body margin */
+    padding: 0;
+}
+
+/* Navigation Styling */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    min-height: 400px; /* Ensure sections have some height */
+}
+
+#home {
+    background-color: #f4f4f4;
+}
+
+#gallery {
+    background-color: #e2e2e2;
+}
+
+#video {
+    background-color: #f4f4f4;
+}
+
+#contact {
+    background-color: #d2d2d2;
+}
+
+/* Gallery Container Styling */
+.gallery-container {
+    display: flex; /* Use flexbox for image layout */
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    justify-content: center; /* Center images horizontally */
+    gap: 15px; /* Space between images */
+    margin-top: 30px;
+}
+
+.gallery-container img {
+    width: 200px; /* Thumbnail size */
+    height: 150px; /* Fixed height for consistent look */
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    border: 3px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    border-color: #4CAF50;
+}
+
+
+/* Lightbox (Modal) Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    display: flex; /* Initially flex to center, then changed by JS */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85%;
+    border: 5px solid white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px; /* Gives space for caption */
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Navigation arrows */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Step 2: Form Input Styling (from your original file) */
+input[type="text"],
+input[type="email"],
+textarea { /* Added textarea */
+    width: 250px;
+    margin: 10px auto; /* Centered with auto margins */
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    display: block; /* Make them block elements for vertical stacking */
+}
+
+input[type="submit"] {
+    width: 270px; /* Slightly wider to match text fields */
+    margin: 10px auto;
+    border: none; /* Remove border */
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    section {
+        padding: 40px 15px;
+    }
+
+    .gallery-container img {
+        width: 150px;
+        height: 120px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    input[type="submit"] {
+        width: 80%; /* Adjust width for smaller screens */
+        max-width: 250px; /* Keep a max-width */
+    }
+
+    .modal-content {
+        max-width: 95%;
+        max-height: 80%;
+    }
+
+    .prev, .next {
+        font-size: 16px;
+        padding: 10px;
+        margin-top: -30px;
+    }
+}

@@ -1,21 +1,31 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Set the character encoding and ensure the page scales well on mobile devices -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Page title that appears on the browser tab -->
   <title>Academy Cinemas</title>
+
+  <!-- Link to Bootstrap CSS for responsive design and styling -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
 </head>
 <body>
+
+  <!-- Bootstrap container to center content and add horizontal padding -->
   <div class="container">
-    <!-- Navbar -->
+
+    <!-- Navigation bar with links and a search box -->
     <nav class="navbar navbar-expand-lg navbar-light bg-info">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <!-- Navigation links to jump to different sections of the page -->
           <li class="nav-item active"><a class="nav-link text-light" href="#about">About</a></li>
           <li class="nav-item active"><a class="nav-link text-light" href="#show-time">Showtime</a></li>
           <li class="nav-item active"><a class="nav-link text-light" href="#deals">Deals</a></li>
         </ul>
+        <!-- Search form in the navbar -->
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search">
           <button class="btn btn-primary text-light" type="submit">Search</button>
@@ -23,7 +33,7 @@
       </div>
     </nav>
 
-    <!-- Jumbotron -->
+    <!-- Hero section to welcome visitors -->
     <div class="jumbotron jumbotron-fluid bg-info text-center">
       <div class="container">
         <h1 class="display-4 text-light">Academy Cinemas</h1>
@@ -31,12 +41,14 @@
       </div>
     </div>
 
-    <!-- About Section -->
+    <!-- About section with cinema image, description, and currently playing movies -->
     <div id="about">
       <div class="row">
+        <!-- Image column -->
         <div class="col-sm">
           <img class="img-fluid" src="./img/pdx.jpg" alt="Portland Cinema Exterior"/>
         </div>
+        <!-- Cinema accommodations description -->
         <div class="col-sm">
           <h3>Accommodations:</h3>
           <p>Located in beautiful Portland, Oregon's Pearl District, our reels have been spinning since 1959.</p>
@@ -44,6 +56,7 @@
           <p>All of our auditoriums are equipped with brand new Christie 3D® sound systems!</p>
           <p>Relax in our extra-wide, plush reclining chairs. Our seating is disability-friendly.</p>
         </div>
+        <!-- List of currently playing movies -->
         <div class="col-sm">
           <h3>Now Playing:</h3>
           <ul class="list-group">
@@ -55,17 +68,18 @@
       </div>
     </div>
 
-    <!-- Showtime Section -->
+    <!-- Section displaying showtimes for each movie -->
     <div id="show-time" class="my-5">
       <h3>Showtime:</h3>
       <div class="d-flex flex-wrap justify-content-between">
 
-        <!-- Movie Card 1 -->
+        <!-- Individual movie card with showtimes -->
         <div class="card mb-4" style="width: 22rem;">
           <img src="./img/cars.jpg" class="img-fluid" alt="Cars">
           <div class="card-body text-info">
             <h5 class="card-title">Cars</h5>
             <p class="card-text">Lightning McQueen gets waylaid in Radiator Springs, where he discovers the true meaning of friendship and family.</p>
+            <!-- Available showtimes as badges -->
             <div>
               <span class="badge badge-primary">1:00 pm</span>
               <span class="badge badge-primary">3:00 pm</span>
@@ -76,7 +90,7 @@
           </div>
         </div>
 
-        <!-- Movie Card 2 -->
+        <!-- Repeat card for Finding Nemo -->
         <div class="card mb-4" style="width: 22rem;">
           <img src="./img/findingnemo.jpg" class="img-fluid" alt="Finding Nemo">
           <div class="card-body text-info">
@@ -92,7 +106,7 @@
           </div>
         </div>
 
-        <!-- Movie Card 3 -->
+        <!-- Repeat card for Top Gun: Maverick -->
         <div class="card mb-4" style="width: 22rem;">
           <img src="./img/topgunmaverick.jpg" class="img-fluid" alt="Top Gun: Maverick">
           <div class="card-body text-info">
@@ -111,7 +125,19 @@
       </div>
     </div>
 
-    <!-- Signup Form -->
+    <!-- Promotional section for deals -->
+    <div class="jumbotron jumbotron-fluid bg-info mt-5 text-center">
+      <div class="container">
+        <h1 class="display-4 hidden-sm-down" style="color:#fff;font-family:Roboto;font-weight:900;text-transform:uppercase;">
+          Movie Deals
+        </h1>
+        <p class="lead">Check out our monthly deals..</p>
+        <!-- Button to open the modal with more info -->
+        <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#registerModal">See our monthly movie deals!</button>
+      </div>
+    </div>
+
+    <!-- Sign-up form for rewards program -->
     <div id="deals" class="text-center my-5">
       <form>
         <h1 class="text-primary mb-4">Sign up for Movie Club Rewards!</h1>
@@ -122,7 +148,7 @@
       </form>
     </div>
 
-    <!-- Footer -->
+    <!-- Footer with contact links and copyright -->
     <div class="container my-5">
       <ul class="nav">
         <li class="nav-item"><small><a class="nav-link active" href="#">Movie Rewards</a></small></li>
@@ -134,7 +160,39 @@
 
   </div>
 
-  <!-- Scripts -->
+  <!-- Modal window for more detailed movie deal sign-up -->
+  <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Sign Up for Movie Deals!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Form inside modal -->
+          <form>
+            <div class="form-group">
+              <label for="registerEmail">Email address</label>
+              <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="registerName">Your Name</label>
+              <input type="text" class="form-control" id="registerName" placeholder="Enter your name">
+            </div>
+            <p><small class="text-muted">Receive exclusive discounts and early bird access to tickets!</small></p>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Required Bootstrap JS scripts -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>

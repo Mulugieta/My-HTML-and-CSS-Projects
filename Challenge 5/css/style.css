@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  /* Challenge 5-5: Navbar */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+  
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-list li {
+    margin: 0 20px;
+  }
+  
+  .navbar-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .navbar-link:hover {
+    color: #ffc107;
+  }
+  
+  /* Challenge 5-9: Background Video */
+  .video-container {
+    width: 100%;
+    margin-top: 60px;
+    overflow: hidden;
+  }
+  
+  .background-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  /* Challenge 5-10: Video with Text Overlay */
+  .video-overlay-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  .overlay-video {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .video-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+  
+  .video-text h2 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  .video-text p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  /* Challenge 5-4: Image with Text Overlay */
+  .image-container {
+    position: relative;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  .styled-image {
+    width: 100%;
+    filter: grayscale(50%) brightness(1.2);
+    border-radius: 20px;
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container:hover .image-overlay {
+    opacity: 1;
+  }
+  
+  .image-overlay p {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Challenge 5-3: Table Styling */
+  .styled-table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+  }
+  
+  .styled-table thead {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Challenge 5-6: Two Column Layout */
+  .two-column-layout {
+    display: flex;
+    margin: 40px auto;
+    max-width: 1000px;
+  }
+  
+  .column {
+    width: 50%;
+    padding: 20px;
+    height: 300px;
+    box-sizing: border-box;
+  }
+  
+  .left-column {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .right-column {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+  
+  /* Challenge 5-7: Paragraph Hover Effect */
+  .hover-effect {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .hover-effect:hover {
+    color: #007bff;
+    transform: scale(1.1);
+  }
+  
+  /* Challenge 5-11: Media Query Responsive Paragraph */
+  .responsive-text {
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .responsive-text {
+      color: blue;
+    }
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
