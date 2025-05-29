@@ -10,6 +10,13 @@
 
   <!-- Link to Bootstrap CSS for responsive design and styling -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+  <!-- Custom CSS for responsive font size -->
+  <style>
+    .responsive-title {
+      font-size: 6vw; /* Responsive font size using viewport width */
+    }
+  </style>
 </head>
 <body>
 
@@ -36,7 +43,8 @@
     <!-- Hero section to welcome visitors -->
     <div class="jumbotron jumbotron-fluid bg-info text-center">
       <div class="container">
-        <h1 class="display-4 text-light">Academy Cinemas</h1>
+        <!-- Responsive text using vw unit -->
+        <h1 class="display-4 text-light responsive-title">Academy Cinemas</h1>
         <p class="lead text-light">Sit back, relax, and enjoy the show....</p>
       </div>
     </div>
