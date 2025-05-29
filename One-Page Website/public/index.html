@@ -4,6 +4,34 @@
     <meta charset="UTF-8">
     <title>BMW E36 Tribute</title>
     <link rel="stylesheet" href="one_page_website.css">
+
+    <!-- Fade-in effect styles -->
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply fade-in to major layout sections */
+        section, nav, footer {
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        /* Staggered delays for sequential fade-in */
+        nav { animation-delay: 0s; }
+        section:nth-of-type(1) { animation-delay: 0.2s; }
+        section:nth-of-type(2) { animation-delay: 0.4s; }
+        section:nth-of-type(3) { animation-delay: 0.6s; }
+        section:nth-of-type(4) { animation-delay: 0.8s; }
+        footer { animation-delay: 1s; }
+    </style>
 </head>
 <body>
 
